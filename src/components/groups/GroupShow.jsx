@@ -1,7 +1,10 @@
 import React from 'react'
 import { Redirect, useLocation } from 'react-router-dom'
-import { Show, GridShowLayout, Datagrid, DeleteButton, FunctionField, Tab, TabbedShowLayout, TextField, RaGrid, ReferenceField, ReferenceManyField } from '../_design'
+import { Show, ShowTitle, GridShowLayout, Datagrid, DeleteButton, FunctionField, Tab, TabbedShowLayout, TextField, RaGrid, ReferenceField, ReferenceManyField } from '../_design'
 import { resourcesMap } from '../../constants'
+import { makeStyles } from '@material-ui/styles'
+
+
 
 const GroupShow = props => {
     // const location = useLocation()
@@ -11,7 +14,7 @@ const GroupShow = props => {
     // }
 
     return (
-        <Show {...props}>
+        <Show {...props} title={<ShowTitle render={r => `Group - ${r.title}`} />}>
             <GridShowLayout>
                 <RaGrid container>
                     <RaGrid item xs={12}>
@@ -38,10 +41,6 @@ const GroupShow = props => {
             </GridShowLayout>
         </Show>
     )
-}
-
-GroupShow.propTypes = {
-
 }
 
 export default GroupShow
