@@ -20,7 +20,12 @@ const groupEntity = createResourceEntity(
     PeopleIcon,
 )
 
-export const resourcesMap= {
+export const apiOnlyResources = {
+    usergroup: { name: 'usergroup' }
+}
+
+export const resourcesMap = {
     users: userEntity,
     groups: groupEntity,
+    ...apiOnlyResources
 }

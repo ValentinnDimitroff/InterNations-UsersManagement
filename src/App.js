@@ -3,6 +3,7 @@ import { Admin, Resource } from 'react-admin'
 import { createBrowserHistory as createHistory } from 'history'
 import { dataProvider, i18nProvider } from './ra-providers'
 import { crudResources } from './components'
+import { apiOnlyResources } from './constants'
 
 const history = createHistory()
 
@@ -19,6 +20,7 @@ export const App = (props) => {
 		// customRoutes={routesProvider}
 		>
 			{addCrudResources(crudResources)}
+			{addApiOnlyResources(apiOnlyResources)}
 		</Admin>
 	);
 }
@@ -26,5 +28,11 @@ export const App = (props) => {
 const addCrudResources = (resCollection) => {
 	return resCollection.map(
 		({ name, crud, ...rest }) => <Resource key={name} name={name} {...crud} {...rest} />
+	)
+}
+
+const addApiOnlyResources = (apiResources) => {
+	return Object.keys(apiResources).map(
+		(key) => <Resource key={apiResources[key].name} name={apiResources[key].name} />
 	)
 }
