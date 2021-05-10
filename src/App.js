@@ -18,13 +18,13 @@ export const App = (props) => {
 		// theme={theme}
 		// customRoutes={routesProvider}
 		>
-			{addCrudResources(crudResources, null)}
+			{addCrudResources(crudResources)}
 		</Admin>
 	);
 }
 
-const addCrudResources = (resCollection, permissions) => {
+const addCrudResources = (resCollection) => {
 	return resCollection.map(
-		(x, i) => <Resource key={i} name={x.basePath} {...x.crud} />
+		({ name, crud, ...rest }) => <Resource key={name} name={name} {...crud} {...rest} />
 	)
 }

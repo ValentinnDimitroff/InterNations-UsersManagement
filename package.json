@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "ra-compact-ui": "^1.1.0",
-    "ra-data-simple-rest": "^3.13.4",
+    "ra-data-local-storage": "^3.14.5",
     "react": "17.0.0",
     "react-admin": "^3.14.5",
     "react-dom": "17.0.0",
