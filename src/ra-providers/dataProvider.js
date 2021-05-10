@@ -8,8 +8,8 @@ const dataProvider = localStorageDataProvider({
             { id: 1, firstName: 'Lewis', lastName: 'Hamilton', email: 'lh@f1.com',  },
         ],
         groups: [
-            { id: 0, title: 'Group 0', },
-            { id: 1, title: 'Group 1', },
+            { id: 0, title: 'Newcomers', description: 'This is a group for onboarding new staff members',},
+            { id: 1, title: 'Coordinators', description: 'This is a group for communities coordinators',},
         ],
         usergroup: [
             {user_id: 0, group_id: 0},

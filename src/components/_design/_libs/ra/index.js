@@ -7,8 +7,11 @@ export {
     Tab,
     Datagrid,
     // fields
+    FunctionField,
     TextField,
     EmailField,
+    ReferenceField,
+    ReferenceManyField,
     // inputs
     Create,
     SimpleForm,
@@ -21,6 +24,8 @@ export {
 
 export {
     BoxedShowLayout,
+    GridShowLayout,
+    RaGrid,
     RaBox,
     ChipFieldArray,
     FullNameField,

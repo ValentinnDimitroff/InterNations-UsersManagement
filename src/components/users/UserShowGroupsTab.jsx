@@ -13,7 +13,7 @@ const UserShowGroupsTab = ({ record, ...props }) => {
             {...props}
         >
             <Datagrid>
-                <ReferenceField link={false} label="Title" source="group_id" reference={resourcesMap.groups.name}>
+                <ReferenceField link="show" label="Title" source="group_id" reference={resourcesMap.groups.name}>
                     <TextField source="title" />
                 </ReferenceField>
             </Datagrid>
