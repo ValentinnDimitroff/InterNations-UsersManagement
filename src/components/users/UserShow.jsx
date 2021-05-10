@@ -3,6 +3,7 @@ import { Redirect, useLocation } from 'react-router-dom'
 import { Show, ShowSplitter, BoxedShowLayout, Tab, TabbedShowLayout, TextField, RaBox } from '../_design'
 import UserProfileAvatar from './common/UserProfileAvatar'
 import UserTitle from './common/UserTitle'
+import UserShowGroupsTab from './UserShowGroupsTab'
 
 const UserShow = (props) => {
     const location = useLocation()
@@ -29,7 +30,7 @@ const UserShow = (props) => {
                 rightSide={
                     <TabbedShowLayout>
                         <Tab label="Groups" path="groups">
-                            <div>Empty</div>
+                            <UserShowGroupsTab/>
                         </Tab>
                     </TabbedShowLayout>
                 }
