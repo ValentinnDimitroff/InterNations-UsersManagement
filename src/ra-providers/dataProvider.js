@@ -1,7 +1,7 @@
 import localStorageDataProvider from "ra-data-local-storage";
 
 const dataProvider = localStorageDataProvider({
-  loggingEnabled: true,
+  loggingEnabled: false,
   defaultData: {
     users: [
       {
