@@ -15,9 +15,6 @@ export const App = (props) => {
 			dataProvider={dataProvider}
 			i18nProvider={i18nProvider}
 			history={history}
-		// dashboard={Dashboard}
-		// theme={theme}
-		// customRoutes={routesProvider}
 		>
 			{addCrudResources(crudResources)}
 			{addApiOnlyResources(apiOnlyResources)}
