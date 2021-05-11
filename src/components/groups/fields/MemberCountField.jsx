@@ -10,7 +10,7 @@ const MemberCountField = ({ record, ...props }) => {
         <FunctionField {...props}  render={() => member_ids.length} />
     )
 }
-// record={record}
+
 MemberCountField.propTypes = {
     record: PropTypes.object,
     label: PropTypes.string,

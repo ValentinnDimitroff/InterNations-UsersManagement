@@ -1,21 +1,15 @@
 import React from 'react'
-import { Create, SimpleForm, TextInput } from '../_design'
-import { useNotify } from 'ra-core'
+import { Create, useOnSuccess } from '../_design'
+import GroupsForm from './GroupsForm'
 
 const GroupsCreate = props => {
-    const notify = useNotify()
+    const onSuccess = useOnSuccess("Group created successfully!", "list")
 
     return (
-        <Create {...props} onSuccess={() => notify("Group created successfully!")}>
-            <SimpleForm {...props} redirect="list">
-                <TextInput source="title" />
-            </SimpleForm>
+        <Create {...props} onSuccess={onSuccess}>
+            <GroupsForm />
         </Create>
     )
-}
-
-GroupsCreate.propTypes = {
-
 }
 
 export default GroupsCreate

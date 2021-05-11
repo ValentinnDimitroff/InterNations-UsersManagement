@@ -1,20 +1,19 @@
 import React from 'react'
-import { Show, ShowTitle, GridShowLayout, Datagrid, DeleteButton, FunctionField, TextField, RaGrid, ReferenceField, ReferenceManyField, MuiIcons } from '../_design'
+import { Show, ShowTitle, GridShowLayout, Datagrid, DeleteButton, FunctionField, TextField, RaGrid, ReferenceField, ReferenceManyField } from '../_design'
 import { resourcesMap } from '../../constants'
-import { makeStyles } from '@material-ui/styles'
+// import { makeStyles } from '@material-ui/styles'
 import { Pagination } from 'ra-ui-materialui'
 import AddUserButton from './buttons/AddUserButton'
 
-const useStyles = makeStyles(() => ({
-    usersLabel: {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center'
-    }
-}))
+// const useStyles = makeStyles(() => ({
+//     usersLabel: {
+//         display: 'flex',
+//         justifyContent: 'space-between',
+//         alignItems: 'center'
+//     }
+// }))
 
 const GroupShow = props => {
-    const classes = useStyles()
 
     return (
         <Show {...props} title={<ShowTitle render={r => `Group - ${r.title}`} />}>

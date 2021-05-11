@@ -1,19 +1,16 @@
 import React from 'react'
-import { Edit, useNotify } from 'react-admin'
+import { Edit } from 'react-admin'
+import { useOnSuccess } from '../_design'
 import GroupsForm from './GroupsForm'
 
 const GroupsEdit = props => {
-    const notify = useNotify()
+    const onSuccess = useOnSuccess("Group edited successfully!", "list")
     
     return (
-        <Edit {...props} onSuccess={() => notify("Group edited successfully!")}>
+        <Edit {...props} onSuccess={onSuccess}>
             <GroupsForm />
         </Edit>
     )
-}
-
-GroupsEdit.propTypes = {
-
 }
 
 export default GroupsEdit
