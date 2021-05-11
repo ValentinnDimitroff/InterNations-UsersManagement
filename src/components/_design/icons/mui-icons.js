@@ -16,6 +16,7 @@ import Done from '@material-ui/icons/Done'
 import MoreVerticalDots from '@material-ui/icons/MoreVert'
 import ArrowDropDown from '@material-ui/icons/ArrowDropDown'
 import Close from '@material-ui/icons/Close'
+import Create from '@material-ui/icons/Add';
 
 export { default as ImageIcon } from '@material-ui/icons/Image'
 
@@ -31,6 +32,7 @@ export default {
     Website,
     Actions: {
         Close,
+        Create,
         Edit,
         Delete,
         Done,

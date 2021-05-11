@@ -1,41 +1,46 @@
 import React from 'react'
 import { Redirect, useLocation } from 'react-router-dom'
-import { Show, ShowTitle, GridShowLayout, Datagrid, DeleteButton, FunctionField, Tab, TabbedShowLayout, TextField, RaGrid, ReferenceField, ReferenceManyField } from '../_design'
+import { Show, ShowTitle, GridShowLayout, Datagrid, DeleteButton, FunctionField, Tab, TabbedShowLayout, TextField, RaGrid, ReferenceField, ReferenceManyField, MuiIcons } from '../_design'
 import { resourcesMap } from '../../constants'
 import { makeStyles } from '@material-ui/styles'
+import { Pagination } from 'ra-ui-materialui'
+import AddUserButton from './buttons/AddUserButton'
 
-
+const useStyles = makeStyles(() => ({
+    usersLabel: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center'
+    }
+}))
 
 const GroupShow = props => {
-    // const location = useLocation()
-
-    // if (location.pathname.endsWith('show')) {
-    //     return <Redirect to={`${location.pathname}/details`} />
-    // }
+    const classes = useStyles()
 
     return (
         <Show {...props} title={<ShowTitle render={r => `Group - ${r.title}`} />}>
             <GridShowLayout>
                 <RaGrid container>
-                    <RaGrid item xs={12}>
+                    <RaGrid item xs={12} md={6}>
                         <TextField source="title" />
                         <TextField source="description" />
                     </RaGrid>
-                    <RaGrid item xs={12}>
+                    <RaGrid item xs={12} md={6}>
                         <ReferenceManyField
                             label="Users"
                             reference={resourcesMap.usergroup.name}
                             target={resourcesMap.groups.refId}
                             perPage={10}
-                            {...props}
+                            pagination={<Pagination />}
                         >
                             <Datagrid>
-                                <ReferenceField link="show" label="Names" source={resourcesMap.users.refId} reference={resourcesMap.users.name}>
+                                <ReferenceField link="show" label="Full name" source={resourcesMap.users.refId} reference={resourcesMap.users.name}>
                                     <FunctionField render={r => `${r.firstName} ${r.lastName}`} />
                                 </ReferenceField>
-                                <DeleteButton />
+                                <DeleteButton redirect={false}/>
                             </Datagrid>
                         </ReferenceManyField>
+                        <AddUserButton fullWidth />
                     </RaGrid>
                 </RaGrid>
             </GridShowLayout>
