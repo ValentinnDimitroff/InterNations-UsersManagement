@@ -1,11 +1,13 @@
 import React from 'react'
-import { Edit } from 'react-admin'
+import { Edit, useNotify } from 'react-admin'
 import UserTitle from './common/UserTitle'
 import UsersForm from './UsersForm'
 
 const UsersEdit = (props) => {
+    const notify = useNotify()
+
     return (
-        <Edit {...props} title={<UserTitle />}>
+        <Edit {...props} title={<UserTitle />} onSuccess={() => notify("User edited successfully!")}>
             <UsersForm />
         </Edit>
     )

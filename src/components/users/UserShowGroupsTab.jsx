@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Datagrid, ReferenceField, ReferenceManyField } from 'ra-ui-materialui'
 import { resourcesMap } from '../../constants'
 import { TextField } from '../_design'
@@ -19,10 +18,6 @@ const UserShowGroupsTab = ({ record, ...props }) => {
             </Datagrid>
         </ReferenceManyField>
     )
-}
-
-UserShowGroupsTab.propTypes = {
-
 }
 
 export default UserShowGroupsTab

@@ -1,10 +1,12 @@
 import React from 'react'
-import { Edit } from 'react-admin'
+import { Edit, useNotify } from 'react-admin'
 import GroupsForm from './GroupsForm'
 
 const GroupsEdit = props => {
+    const notify = useNotify()
+    
     return (
-        <Edit {...props}>
+        <Edit {...props} onSuccess={() => notify("Group edited successfully!")}>
             <GroupsForm />
         </Edit>
     )
