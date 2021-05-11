@@ -1,17 +1,14 @@
 import React from 'react'
 import { useNotify } from 'ra-core'
-import { Create, SimpleForm, TextInput } from '../_design'
+import { Create } from '../_design'
+import UsersForm from './UsersForm'
 
 const UsersCreate = (props) => {
     const notify = useNotify()
 
     return (
         <Create {...props} onSuccess={() => notify("User created successfully!")}>
-            <SimpleForm {...props} redirect="list">
-                <TextInput source="firstName" />
-                <TextInput source="lastName" />
-                <TextInput source="email" />
-            </SimpleForm>
+            <UsersForm />
         </Create>
     )
 }
