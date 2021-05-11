@@ -6,11 +6,16 @@ const dataProvider = localStorageDataProvider({
     users: [
       {
         id: 0,
-        firstName: "Michael",
-        lastName: "Schumacher",
-        email: "m.schumi@f1.com",
+        firstName: "John",
+        lastName: "Doe",
+        email: "john.doe@internations.com",
       },
-      { id: 1, firstName: "Lewis", lastName: "Hamilton", email: "lh@f1.com" },
+      {
+        id: 1,
+        firstName: "Lewis",
+        lastName: "Smith",
+        email: "l.smith@internations.com",
+      },
     ],
     groups: [
       {
