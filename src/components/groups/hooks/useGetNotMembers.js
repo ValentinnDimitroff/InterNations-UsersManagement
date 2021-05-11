@@ -4,10 +4,8 @@ import { resourcesMap } from "../../../constants"
 import { useGetMembers } from "./useGetMembers";
 
 export const useGetNotMembers = (record) => {
-    const { data: membersData, loaded: loadedMembers } = useGetMembers(record && record.id)
+    const { member_ids, loaded: loadedMembers } = useGetMembers(record && record.id)
     const { data: usersData, ids: user_ids, loaded: loadedUsers } = useGetList(resourcesMap.users.name)
-
-    const member_ids = loadedMembers ? Object.keys(membersData).map((key) => membersData[key].user_id) : [];
 
     const notMembers = useMemo(() => {
         return (loadedMembers && loadedUsers)

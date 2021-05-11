@@ -4,16 +4,19 @@ import {
     Datagrid,
     TextField,
     EditButton,
-    DeleteButton,
 } from '../_design'
+import DeleteGroupButton from './buttons/DeleteGroupButton'
+import MemberCountField from './fields/MemberCountField'
 
 const GroupsList = props => {
+
     return (
         <List {...props} >
             <Datagrid rowClick="show">
                 <TextField source="title" />
+                <MemberCountField alignText="center" label="Members Count"/>
                 <EditButton />
-                <DeleteButton />
+                <DeleteGroupButton />
             </Datagrid>
         </List>
     )

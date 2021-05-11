@@ -11,5 +11,7 @@ export const useGetMembers = (groupId) => {
         {},
     )
 
-    return { data, loaded, loading }
+    const member_ids = loaded ? Object.keys(data).map((key) => data[key].user_id) : [];
+
+    return { data, member_ids, loaded, loading }
 }
