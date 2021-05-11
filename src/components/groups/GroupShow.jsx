@@ -1,6 +1,5 @@
 import React from 'react'
-import { Redirect, useLocation } from 'react-router-dom'
-import { Show, ShowTitle, GridShowLayout, Datagrid, DeleteButton, FunctionField, Tab, TabbedShowLayout, TextField, RaGrid, ReferenceField, ReferenceManyField, MuiIcons } from '../_design'
+import { Show, ShowTitle, GridShowLayout, Datagrid, DeleteButton, FunctionField, TextField, RaGrid, ReferenceField, ReferenceManyField, MuiIcons } from '../_design'
 import { resourcesMap } from '../../constants'
 import { makeStyles } from '@material-ui/styles'
 import { Pagination } from 'ra-ui-materialui'
