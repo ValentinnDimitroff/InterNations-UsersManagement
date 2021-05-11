@@ -1,3 +1,3 @@
-import englishDomain from './english-domain-pack'
+import englishDomain from "./english-domain-pack";
 
-export { englishDomain }
+export { englishDomain };

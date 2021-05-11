@@ -1,6 +1,6 @@
 export default {
-    menu: {
-        users: 'Users',
-        groups: 'Groups',
-    },
-}
+  menu: {
+    users: "Users",
+    groups: "Groups",
+  },
+};

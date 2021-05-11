@@ -1,1 +1,1 @@
-export { default as ShowTitle } from './ShowTitle'
+export { default as ShowTitle } from "./ShowTitle";

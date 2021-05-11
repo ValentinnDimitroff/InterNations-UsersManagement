@@ -1,1 +1,1 @@
-export { default as MuiIcons } from './mui-icons'
+export { default as MuiIcons } from "./mui-icons";

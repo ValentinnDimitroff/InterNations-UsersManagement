@@ -1,1 +1,1 @@
-export * from './resources.constants'
+export * from "./resources.constants";

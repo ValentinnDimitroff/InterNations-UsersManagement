@@ -1,2 +1,2 @@
-export * from './useSwitch'
-export * from './useOnSuccess'
+export * from "./useSwitch";
+export * from "./useOnSuccess";

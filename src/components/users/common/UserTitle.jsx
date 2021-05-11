@@ -1,11 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { FullNameField } from '../../_design'
+import React from "react";
+import PropTypes from "prop-types";
+import { FullNameField } from "../../_design";
 
-const UserTitle = ({ record }) => (record ? <FullNameField record={record} size="32" /> : null)
+const UserTitle = ({ record }) =>
+  record ? <FullNameField record={record} size="32" /> : null;
 
 UserTitle.propTypes = {
-    record: PropTypes.object,
-}
+  record: PropTypes.object,
+};
 
-export default UserTitle
+export default UserTitle;
